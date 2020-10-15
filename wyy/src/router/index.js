@@ -1,25 +1,41 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import NavPage from '../views/nav.vue'
 
-const routes = [
-  {
+const routes = [{
     path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    name: 'NavPage',
+    component: NavPage,
+    redirect: "/Find",
+    children: [{
+        path: '/Find',
+        name: 'Find',
+        component: () =>
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            import ( /* webpackChunkName: "find" */ '../views/find.vue')
+    }, {
+        path: '/My',
+        name: 'My',
+        component: () =>
+            import ( /* webpackChunkName: "my" */ '../views/my.vue')
+    }, {
+        path: '/Friend',
+        name: 'Friend',
+        component: () =>
+            import ( /* webpackChunkName: "friend" */ '../views/friend.vue')
+    }, {
+        path: '/Video',
+        name: 'Video',
+        component: () =>
+            import ( /* webpackChunkName: "video" */ '../views/video.vue')
+    }]
+}]
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
+    linkActiveClass: "actave",
+    history: createWebHashHistory(),
+    routes
 })
 
 export default router

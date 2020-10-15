@@ -5,39 +5,56 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> -->
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>
         <%= htmlWebpackPlugin.options.title %>
     </title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        li {
-            list-style: none;
-        }
-        
         #lead {
             width: 100vw;
             height: 100vh;
             background: #dd001b;
             color: #ffffff;
+            overflow: hidden;
             display: none;
-            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             z-index: 999;
+            /* width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #dd001b;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 10px;
+            z-index: 999; */
         }
         
         .lead_title {
             width: 100%;
             position: absolute;
-            top: 10rem;
-            font-size: 2.8rem;
+            top: 2rem;
+            font-size: 1rem;
             text-align: center;
             opacity: 0;
             animation: titleMove 1s both;
+            /* position: absolute;
+            top: 2.3em;
+            width: 100%;
+            color: #fff;
+            font-size: 4.6em;
+            line-height: 1.5;
+            text-align: center;
+            opacity: 0;
+            animation: titleMove 1s both; */
         }
         
         @keyframes titleMove {
@@ -47,12 +64,21 @@
         }
         
         .lead_icon {
+            font-size: .4rem;
             width: 100%;
             position: absolute;
-            bottom: 10rem;
+            bottom: 1rem;
             text-align: center;
             opacity: 0;
             animation: iconMove 2s both;
+            /* font-size: 2em;
+            width: 100%;
+            position: absolute;
+            bottom: 3em;
+            line-height: 1.5;
+            text-align: center;
+            opacity: 0;
+            animation: iconMove 3s both; */
         }
         
         @keyframes iconMove {
@@ -62,6 +88,10 @@
             100% {
                 opacity: 1;
             }
+        }
+        
+        #app {
+            font-size: .28rem;
         }
     </style>
 </head>

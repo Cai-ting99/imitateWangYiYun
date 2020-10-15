@@ -2,10 +2,21 @@
   <div id="nav">
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> -->
+    <!-- <Nav></Nav> -->
     <router-view></router-view>
   </div>
 </template>
 
+<script>
+// @ is an alias to /src
+//  import Nav from '@/views/nav.vue'
+export default {
+  name:"App",
+  components:{
+    // Nav
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -14,17 +25,26 @@
   text-align: center;
   color: #2c3e50;
 }
-
-/* #nav {
-  padding: 30px;
+html,
+body {
+    font-size: 13.33vw;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #ffffff;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-} */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #999999;
+}
 </style>
