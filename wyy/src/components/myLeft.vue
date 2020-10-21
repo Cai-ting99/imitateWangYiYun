@@ -6,10 +6,13 @@
      <div class="no_login">
        <p>登陆网易云音乐</p>
        <p>手机电脑多端同步，尽享海量高品质音乐</p>
-       <button>立即登录</button>
+       <button class="login_immediately">立即登录</button>
      </div>
      <!-- 已登录状态 -->
    </header>
+   <section class="main">
+     
+   </section>
  </div>
 </template>
 
@@ -30,7 +33,7 @@ export default {
     top: 0;
     width: 100vw;
     height: 100vh;
-background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
 .login_menu{
   width: 6rem;
@@ -45,6 +48,24 @@ background: rgba(0, 0, 0, 0.7);
   .login_header{
     height: 3rem;
     background: #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .no_login{
+      font-size: .2rem;
+      color: rgba(0, 0, 0, 0.4);
+      .login_immediately{
+        margin-top: .2rem;
+        background-color: transparent;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0.1rem 0.5rem;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 0.5rem;
+        font-size: 0.2rem;
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
   }
 }
 </style>
