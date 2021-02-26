@@ -1,6 +1,7 @@
 <template>
-  <header class="head_nav">
-    <div class="icon iconfont icon-caidan" @click="openLeft"></div>
+<div>
+<header class="head_nav">
+    <div class="icon iconfont icon-caidan" @click="SHOW_LEFT"></div>
     <ul class="nav_list">
       <router-link tag="li" replace to="/My">我的</router-link>
       <router-link tag="li" replace to="/Find">发现</router-link>
@@ -9,11 +10,14 @@
     </ul>
     <div class="icon iconfont icon-sousuo"></div>
   </header>
-  <my-left v-if="isLeftShow"></my-left>
+  <my-left></my-left>
   <router-view></router-view>
+</div>
+  
 </template>
 <script>
 import MyLeft from "../components/myLeft.vue";
+import {mapMutations} from "vuex"
 export default {
   name: "Nav",
   components: {
@@ -21,13 +25,14 @@ export default {
   },
   data() {
       return {
-          isLeftShow:false
+        // isLeftShow:false
       }
   },
+  created(){
+
+  },
   methods:{
-      openLeft(){
-          this.isLeftShow = !this.isLeftShow
-      }
+    ...mapMutations(['SHOW_LEFT']),
   }
 };
 </script>

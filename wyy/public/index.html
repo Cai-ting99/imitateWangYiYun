@@ -119,22 +119,38 @@
 </body>
 <script>
     // 页面加载完成，封面隐藏
-    let body = document.querySelector("body")
-    let lead = document.querySelector("#lead")
-    let isLead = sessionStorage.getItem("overLead")
+    let body = document.querySelector("body"),
+        lead = document.querySelector("#lead"),
+        isLead = sessionStorage.getItem("overLead");
     if (!isLead) {
-        setLead(body, lead)
+        openLead(body, lead)
     }
 
-    function setLead(body, lead) {
-        body.style.overflow = 'hide'
+    function openLead(body, lead) {
+        body.style.overflow = 'hide';
         lead.style.display = 'block'
-        sessionStorage.setItem("overLead", 1)
+        sessionStorage.setItem("overLead", "1")
         setTimeout(() => {
-            body.style.overflow = ''
-            lead.style.display = 'none'
+            body.style.overflow = '',
+                lead.style.display = 'none'
         }, 3000)
     }
+    // let body = document.querySelector("body")
+    // let lead = document.querySelector("#lead")
+    // let isLead = sessionStorage.getItem("overLead")
+    // if (!isLead) {
+    //     setLead(body, lead)
+    // }
+
+    // function setLead(body, lead) {
+    //     body.style.overflow = 'hide'
+    //     lead.style.display = 'block'
+    //     sessionStorage.setItem("overLead", 1)
+    //     setTimeout(() => {
+    //         body.style.overflow = ''
+    //         lead.style.display = 'none'
+    //     }, 3000)
+    // }
 </script>
 
 </html>
