@@ -25,7 +25,8 @@ import {mapGetters,mapMutations} from "vuex"
 import LeftBtn from './leftBtn'
 import LeftListOne from './leftListOne'
 import LeftListTwo from './leftListTwo'
-import LeftBom from './leftBom'
+// import LeftBom from './leftBom'
+import LeftBom from '../DarkModelPage'
 export default {
   name: "MyLeft",
   props: {},

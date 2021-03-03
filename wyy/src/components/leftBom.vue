@@ -25,9 +25,6 @@ export default {
                 this.dayNgintText = '日间模式'
             }else{
                 this.dayNgintText = '夜间模式'
-
-
-                window.app[0].style('background','#ccc')
             }
         
         }
