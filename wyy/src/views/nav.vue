@@ -11,12 +11,12 @@
     <div class="icon iconfont icon-sousuo"></div>
   </header>
   <my-left></my-left>
-  <router-view></router-view>
+  <router-view class="main_box"></router-view>
 </div>
   
 </template>
 <script>
-import MyLeft from "../components/myLeft.vue";
+import MyLeft from "../components/left/myLeft.vue"
 import {mapMutations} from "vuex"
 export default {
   name: "Nav",
@@ -25,7 +25,6 @@ export default {
   },
   data() {
       return {
-        // isLeftShow:false
       }
   },
   created(){
@@ -62,4 +61,7 @@ export default {
   font-size: 0.32rem;
   color: black;
 }
+/* .main_box{
+  padding: 0 .2rem;
+} */
 </style>

@@ -1,14 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import NavPage from '../views/nav.vue'
-
 const routes = [{
     path: '/',
     name: 'NavPage',
     component: NavPage,
-    redirect: "/Find",
+    redirect: '/Find',
     children: [{
         path: '/Find',
-        name: 'Find',
         component: () =>
             // route level code-splitting
             // this generates a separate chunk (about.[hash].js) for this route
@@ -30,6 +28,11 @@ const routes = [{
         component: () =>
             import ( /* webpackChunkName: "video" */ '../views/video.vue')
     }]
+}, {
+    path: '/Login',
+    name: 'Login',
+    component: () =>
+        import ( /* webpackChunkName: "video" */ '../components/login/login.vue')
 }]
 
 const router = createRouter({

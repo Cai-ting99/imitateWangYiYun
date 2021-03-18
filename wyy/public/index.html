@@ -12,6 +12,10 @@
         <%= htmlWebpackPlugin.options.title %>
     </title>
     <style>
+        #app {
+            font-size: .28rem;
+        }
+        
         #lead {
             width: 100vw;
             height: 100vh;
@@ -25,36 +29,16 @@
             right: 0;
             bottom: 0;
             z-index: 999;
-            /* width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            background-color: #dd001b;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            font-size: 10px;
-            z-index: 999; */
         }
         
         .lead_title {
             width: 100%;
             position: absolute;
-            top: 2rem;
+            top: 10vh;
             font-size: 1rem;
             text-align: center;
             opacity: 0;
             animation: titleMove 1s both;
-            /* position: absolute;
-            top: 2.3em;
-            width: 100%;
-            color: #fff;
-            font-size: 4.6em;
-            line-height: 1.5;
-            text-align: center;
-            opacity: 0;
-            animation: titleMove 1s both; */
         }
         
         @keyframes titleMove {
@@ -67,18 +51,10 @@
             font-size: .4rem;
             width: 100%;
             position: absolute;
-            bottom: 1rem;
+            bottom: 10vh;
             text-align: center;
             opacity: 0;
             animation: iconMove 2s both;
-            /* font-size: 2em;
-            width: 100%;
-            position: absolute;
-            bottom: 3em;
-            line-height: 1.5;
-            text-align: center;
-            opacity: 0;
-            animation: iconMove 3s both; */
         }
         
         @keyframes iconMove {
@@ -88,10 +64,6 @@
             100% {
                 opacity: 1;
             }
-        }
-        
-        #app {
-            font-size: .28rem;
         }
     </style>
 </head>
